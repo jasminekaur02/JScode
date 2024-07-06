@@ -15,5 +15,13 @@ function secondlargest(arr){
 function secondLargestoptimised(){
     let largest = Number.NEGATIVE_INFINITY;
     let secondlargest = Number.NEGATIVE_INFINITY;
-    for(i=0; i)
+    for(i=0; i<arr.length ; i++){
+        if(arr[i]> largest){
+            secondlargest = largest;
+            largest = arr[i];
+        }
+        else if (arr[i]!= largest && arr[i]>secondlargest){
+            secondlargest = arr[i];
+        }
+    }
 }
